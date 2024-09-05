@@ -12,9 +12,11 @@ const Users = () => {
 
   const { data, isError, isLoading, isSuccess } = useGetUsersQuery()
 
+  const containerStyles = "w-full text-center my-32"
+
   if (isError) {
     return (
-      <div className="w-full text-center my-32">
+      <div className={containerStyles}>
         <h1 className="text-2xl font-bold text-red-300">
           There was an error!!!
         </h1>
@@ -24,7 +26,7 @@ const Users = () => {
 
   if (isLoading) {
     return (
-      <div className="w-full text-center my-32">
+      <div className={containerStyles}>
         <h1 className="text-2xl font-bold text-blue-300">Loading...</h1>
       </div>
     )

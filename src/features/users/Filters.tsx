@@ -19,32 +19,34 @@ const Filters = ({
   setEmail,
   setPhone,
 }: TProps) => {
+  const inputStyles = "w-[25%] border p-2 rounded-md"
+
   return (
     <div className="container mx-auto my-16">
-      <h1 className="text-2xl ml-2 my-2">Filters:</h1>
+      <h1 className="text-2xl text-center my-2">Filters:</h1>
       <div className="flex justify-center">
         <div className="w-full">
           <div className="flex">
             <input
-              className="w-[15%] border p-1"
+              className={inputStyles}
               placeholder="name"
               value={name}
               onChange={e => setName(e.target.value)}
             />
             <input
-              className="w-[15%] border p-1"
+              className={inputStyles}
               placeholder="username"
               value={username}
               onChange={e => setUsername(e.target.value)}
             />
             <input
-              className="w-[15%] border p-1"
+              className={inputStyles}
               placeholder="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
             <input
-              className="w-[15%] border p-1"
+              className={inputStyles}
               placeholder="phone"
               value={phone}
               onChange={e => setPhone(e.target.value)}
